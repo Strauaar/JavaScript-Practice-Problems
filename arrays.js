@@ -20,3 +20,17 @@ const reverse = (string) => {
 };
 
 console.log(reverse("asd"));
+
+const no_dups = (string) => {
+  let chars = [];
+  let result = '';
+  for(let i = 0; i < string.length; i++) {
+    if(!chars.includes(string[i])) {
+      result = result.concat(string[i]);
+    }
+    chars.push(string[i]);
+  }
+  return result;
+};
+
+console.log(no_dups("aasdd"));
